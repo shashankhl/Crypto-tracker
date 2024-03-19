@@ -1,24 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Pagination from "@material-ui/lab/Pagination";
 import {
   Container,
   createTheme,
-  TableCell,
   LinearProgress,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  TextField,
   ThemeProvider,
   Typography,
-  TextField,
-  TableBody,
-  TableRow,
-  TableHead,
-  TableContainer,
-  Table,
-  Paper,
 } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import Pagination from "@material-ui/lab/Pagination";
 import axios from "axios";
-import { CoinList } from "../config/api";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import { CoinList } from "../config/api";
 import { CryptoState } from "../CryptoContext";
 
 export function numberWithCommas(x) {
@@ -113,7 +113,7 @@ export default function CoinsTable() {
                         fontFamily: "Montserrat",
                       }}
                       key={head}
-                      align={head === "Coin" ? "" : "right"}
+                      align={head === "Coin" ? undefined : "right"}
                     >
                       {head}
                     </TableCell>
@@ -193,7 +193,7 @@ export default function CoinsTable() {
 
         {/* Comes from @material-ui/lab */}
         <Pagination
-          count={(handleSearch()?.length / 10).toFixed(0)}
+          count={handleSearch() ? Math.ceil(handleSearch().length / 10) : 0}
           style={{
             padding: 20,
             width: "100%",
