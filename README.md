@@ -2,14 +2,14 @@
 
 Crypto Tracker by React is a cutting-edge application built using the React framework, designed to provide real-time updates and insights into the volatile world of cryptocurrencies. With sleek design and intuitive user interface, users can effortlessly track their favorite digital assets, monitor prices, and analyze market trends with ease. Leveraging React's component-based architecture, the app offers seamless navigation and responsive performance across various devices. Whether you're a seasoned investor or a newcomer to the crypto space, Crypto Tracker by React empowers users to stay informed and make informed decisions in the fast-paced realm of cryptocurrency trading.
 
-Click here for a <a target="_blank" href=""> DEMO </a>
+Click here for a <a target="_blank" href="https://shashank-crypto-tracker.netlify.app/"> DEMO </a>
 
 ## Setup
 
 Clone the repository
 
 ```
-$ git clone
+$ git clone https://github.com/shashankhl/Crypto-tracker.git
 ```
 
 ```
